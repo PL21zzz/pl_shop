@@ -9,8 +9,18 @@
 }
 
 .container {
-    max-width: 750px;
+    max-width: 1070px;
     width: 100%;
     margin: auto;
     padding: 0 15px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
 }

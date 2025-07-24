@@ -63,3 +63,102 @@
         }
     }
 }
+
+.header__logo {
+    padding: 10px 0;
+}
+
+.header__menu {
+    padding: 18px 0;
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+
+        li {
+            position: relative;
+            list-style: none;
+            
+            a {
+                text-decoration: none;
+                font-size: 16px;
+                color: map.get(theme.$theme-color, 'text');
+                font-weight: bold;
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                transition: all 0.3s;
+                display: block;
+                z-index: 5;
+            }
+
+            .header__menu-dropdown {
+                position: absolute;
+                display: block;
+                width: 180px;
+                background-color: #000;
+                transition: linear 0.3s;
+                opacity: 0;
+                visibility: hidden;
+                padding: 10px;
+
+                li {
+                    a {
+                        text-transform: capitalize;
+                        font-weight: 400;
+                        color: #fff;
+                        padding: 5px;
+                    }
+
+                    :hover {
+                        color: map.get(theme.$theme-color, 'main');
+                    }
+                }
+            }
+
+            
+        }
+        li:hover .header__menu-dropdown {
+            opacity: 1;
+            visibility: visible;
+        }
+        .active a {
+            color: map.get(theme.$theme-color, 'main');
+        }
+    }
+}
+
+.header__cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 0;
+
+    ul {
+        margin-right: 25px;
+
+        li {
+            position: relative;
+            list-style: none;
+            margin-left: 20px;
+
+            svg {
+                font-size: 25px;
+                color: map.get(theme.$theme-color, 'text');
+            }
+
+            span {
+                position: absolute;
+                left: 20px;
+                top: -5px;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                color: #fff;
+                background-color: map.get(theme.$theme-color, 'main');
+                display: inline-block;
+                text-align: center;
+                line-height: 20px;
+            }
+        }
+    }
+}

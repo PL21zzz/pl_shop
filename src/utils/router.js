@@ -1,4 +1,10 @@
 export const ROUTER = {
+  USER: {
     HOME: "/",
-    PROFILE: "/profile"
-}
+    STORE: "/store",
+    PRODUCT: "/product",
+    BLOG: "/blog",
+    CONTACT: "/contact",
+    PROFILE: "/profile",
+  },
+};

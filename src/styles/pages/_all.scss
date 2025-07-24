@@ -1,5 +1,6 @@
 @use "sass:map";
 @use "theme";
+@use "responsive";
 
 * {
     margin: 0;
@@ -23,4 +24,77 @@
 .col-6 {
     flex: 0 0 50%;
     max-width: 50%;
+}
+
+.col-lg-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.col-lg-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.btn-submit {
+    height: 100%;
+    font-size: 14px;
+    display: inline-block;
+    padding: 16px 30px;
+    text-transform: uppercase;
+    color: map.get(theme.$theme-color, 'white-color');
+    border: none;
+    font-weight: 500;
+    background-color: map.get(theme.$theme-color, 'main');
+
+}
+
+@include responsive.Responsive(responsive.$DESKTOP) {
+    .col-xl-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+
+    .col-xl-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@include responsive.Responsive(responsive.$MEDIUM_DEVICE) {
+    .col-lg-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+
+@include responsive.Responsive(responsive.$TABLET_DEVICE) {
+    .col-md-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .col-md-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@include responsive.Responsive(responsive.$WIDE_MOBILE) {
+    .col-sm-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .col-sm-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@include responsive.Responsive(responsive.$SMALL_DEVICES) {
+    .col-xs-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 }
